@@ -1,0 +1,7 @@
+streamlit
+websocket-client
+numpy
+pandas
+scikit-learn
+requests
+
