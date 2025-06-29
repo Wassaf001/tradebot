@@ -4,8 +4,8 @@ from websocket_client import OrderBookWebSocketClient
 from models import estimate_slippage, calculate_fee, almgren_chriss_impact, predict_maker_taker
 from utils import get_usd_price, get_fee_rate
 
-st.set_page_config(page_title="GoQuant Trade Simulator", layout="wide")
-st.title("GoQuant Trade Simulator")
+st.set_page_config(page_title="tradebot", layout="wide")
+st.title("tradebot")
 
 with st.sidebar:
     st.header("Input Parameters")
@@ -34,7 +34,7 @@ def on_orderbook_message(data):
     global orderbook_data
     orderbook_data = data
 
-ws_url = f"wss://ws.gomarket-cpp.goquant.io/ws/l2-orderbook/okx/{spot_asset}"
+ws_url = f"wss://ws.gomarket-cpp.tradebot.io/ws/l2-orderbook/okx/{spot_asset}"
 client = OrderBookWebSocketClient(ws_url, spot_asset, on_orderbook_message)
 client.start()
 time.sleep(1)  
