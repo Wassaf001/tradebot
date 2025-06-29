@@ -39,27 +39,6 @@ Open your browser and go to the local URL provided by Streamlit.
 - `utils.py`: Utility functions (price fetch, fee rates)
 - `documentation/`: Model and algorithm explanations
 
-## License
-MIT License
-
-## Frontend (React)
-A modern React-based frontend is available in the `frontend/` directory. It communicates with the backend via REST API endpoints.
-
-### Running the React Frontend
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-The app will be available at `http://localhost:3000` by default.
 
 ### Backend API
-The backend remains a Python service (see above for running instructions). The React frontend will communicate with it via HTTP endpoints (to be documented in the API section).
+The backend remains a Python service (see above for running instructions). The frontend is in streamlit as of now, but will be deployed using React.
